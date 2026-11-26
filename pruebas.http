@@ -1,0 +1,23 @@
+@base = http://localhost:4000
+GET {{base}}/health
+
+###
+GET {{base}}/api/v1/productos
+
+###
+GET {{base}}/api/v1/productos/1
+
+###
+POST {{base}}/api/v1/productos
+Content-Type: application/json
+
+{"nombre":"Teclado","precio":45,"categoria":"Hardware"}
+
+###
+GET {{base}}/api/v1/productos/999
+
+###
+POST {{base}}/api/v1/productos
+Content-Type: application/json
+
+{"nombre":"Incompleto"}
